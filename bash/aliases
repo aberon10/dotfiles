@@ -1,0 +1,45 @@
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# General
+alias ll='ls -lrt'
+alias la='ls -A'
+alias r='reset'
+alias l='ls -lah'
+alias h='history | grep $1'
+alias c='clear'
+alias o='gnome-open $1'
+alias tf='tail -f -n 100'
+alias '..'='cd ..'
+alias reload='. ~/.bashrc'
+
+# GIT
+alias gb='git branch'
+alias gl='git log'
+alias glo='git log --pretty=oneline'
+alias glp='git log --pretty=format:"%h - %an, %ad : %s" --decorate'
+alias gc='git commit -v'
+alias gca='git commit -v -a'
+alias gcam='git commit --amend'
+alias gd='git diff'
+alias gp='git pull'
+alias gpr='git pull --rebase'
+alias gpu='git push'
+alias gst='git status'
+alias gss='git stash save'
+alias gsa='git stash apply'
+alias gsp='git stash pop'
+alias gsl='git stash list'
+alias grc='git rebase --continue'
+alias gri='git rebase --interactive'
+alias ec='git config --global --list'
+alias grh='git reset HEAD --'
+

@@ -1,0 +1,25 @@
+# Embed in a String to clear all previous ANSI sequences.
+export CLEAR="\e[0m"
+export BOLD="\e[1m"
+
+# Colors
+export BLACK="\e[30m"
+export RED="\e[31m"
+export GREEN="\e[32m"
+export YELLOW="\e[33m"
+export BLUE="\e[34m"
+export MAGENTA="\e[35m"
+export CYAN="\e[36m"
+export WHITE="\e[37m"
+export EDITOR=vim
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+export HISTSIZE=1000
+export HISTFILESIZE=2000
+
+export HISTCONTROL=ignoreboth
+export HISTSIZE=1000
+export HISTFILESIZE=2000
+
+export TERM="xterm-256color"
+export PATH=~/bin:$PATH
